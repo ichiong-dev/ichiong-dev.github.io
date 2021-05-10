@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--related links/scripts -->
+  <link rel="stylesheet" href="css\styles.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Navagis - ichiong</title>
+</head>
+<body>
+  <h1>NAVAGIS Technical Exam</h1>
+  <script src="js\main.js"></script>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB6n-V_N1PebBs0q8wx8MQKy1H_gZYvKgg&libraries=drawing,geometry&callback=initMap">
+  </script>
+  <div id="offset-map" class="col-md-4">
+      <span class="row">
+        <label>Filter by Type: </label>
+        <input type="text" class="form-control" id="filterType" placeholder="Ex.: filipino, ihawan, barbeque"></input>
+      </span>
+      <span class="row">
+        <span class="col-md-4 text-left">
+        <button type="button" id="drawCircle" class="btn btn-primary">Search by Circle</button>
+        </span>
+        <span class="col-md-offset-4">
+        <button type="button" id="showRestaurants" class="btn btn-primary" style="align:right">Show Restaurants</button>
+        </span>
+      </span>
+      <div style="height:450px" class="panel panel-default">
+        <div id="restaurantDetails" hidden class="panel-body">
+          <label>Restaurant Details: </label><br/>
+          <span id="name"></span>
+          <span><b><p>Address: </b></span><span id="address"></p></span>
+          <span><b><p>Reviews:</p></b></span>
+          <div id="reviews" style="text-align:justify;height:300px;overflow:scroll"></div>
+        </div>
+      </div>
+      </div>
+  <div id="map" class="col-md-8"></div>
+</body>
+</html>

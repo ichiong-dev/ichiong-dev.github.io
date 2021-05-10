@@ -1,0 +1,20 @@
+h1.title{
+  color:black;
+  font-family:verdana;
+  font-size: 20px;
+}
+span#name {
+  font-style:bold;
+  color: black;
+  font-size: 15px;
+}
+#map {
+    margin: 10px;
+    height: 78%;
+    width: 60%
+}
+html, body {
+    height: 100%;
+    margin: 5;
+    padding: 2;
+}
