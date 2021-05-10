@@ -102,6 +102,7 @@ var initMap = function(){
   google.maps.event.addListener(drawingManager, 'overlaycomplete', function(e) {
     //store value of circle, to clear later, to avoid many circles
     circle = e.overlay;
+    map.setCenter(circle.getCenter());
     // iterate through data
     $(Object.keys(dataById)).each(function(index,data){
       // set LatLng object for location of objects
